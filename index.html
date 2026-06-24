@@ -59,16 +59,32 @@
       <a class="brand" href="#inicio" aria-label="HD Calhas">
         <img src="imagens/logo.png" alt="HD Calhas" />
       </a>
+
       <div class="nav-links" aria-label="Seções do site">
         <a href="#inicio" class="active">Início</a>
         <a href="#servicos">Serviços</a>
         <a href="#obras">Obras</a>
         <a href="#sobre">Sobre</a>
         <a href="#contato">Contato</a>
+        <a class="nav-social" href="https://wa.me/5527997215812" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          WhatsApp
+        </a>
+        <a class="nav-social" href="https://instagram.com/hd_calhaas" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Instagram
+        </a>
       </div>
+
       <a class="nav-cta" href="https://wa.me/5527997215812" target="_blank" rel="noopener">Orçamento</a>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
 
   <main>
     <section class="hero" id="inicio" aria-label="HD Calhas">
@@ -182,6 +198,7 @@
         <div class="section-heading reveal">
           <span class="section-kicker">Obras realizadas</span>
           <h2>Nossos trabalhos <span class="text-highlight-dark">organizados por </span> aplicação.</h2>
+          <p class="works-hint">Clique na imagem para ampliar e ver os detalhes de perto</p>
         </div>
         <div class="work-grid reveal">
           <figure data-src="imagens/17.jpeg" data-caption="Sistema completo de calhas, condutores e acabamento de telhas instalado em residência com tijolo aparente, garantindo drenagem eficiente.">
@@ -305,20 +322,15 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Flutuante -->
-  <a class="whatsapp-float" href="https://wa.me/5527997215812" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-  </a>
-
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visualização ampliada da obra">
     <div class="lightbox-overlay"></div>
     <button class="lightbox-close" aria-label="Fechar visualização">&times;</button>
     <button class="lightbox-nav lightbox-prev" aria-label="Imagem anterior">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
     </button>
     <button class="lightbox-nav lightbox-next" aria-label="Próxima imagem">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
     </button>
     <div class="lightbox-content">
       <div class="lightbox-image-container">

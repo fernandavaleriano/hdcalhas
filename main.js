@@ -1,6 +1,36 @@
 (function () {
   "use strict";
 
+  // ===== HAMBURGER MENU (MOBILE) =====
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const navOverlay = document.querySelector(".nav-overlay");
+
+  function toggleMenu(open) {
+    const isOpen = open !== undefined ? open : !navLinks.classList.contains("open");
+    navLinks.classList.toggle("open", isOpen);
+    navOverlay.classList.toggle("open", isOpen);
+    hamburger.classList.toggle("active", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }
+
+  hamburger.addEventListener("click", () => toggleMenu());
+
+  navOverlay.addEventListener("click", () => toggleMenu(false));
+
+  // Close menu when a nav link is clicked
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => toggleMenu(false));
+  });
+
+  // Close menu on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navLinks.classList.contains("open")) {
+      toggleMenu(false);
+    }
+  });
+
   // ===== REVEAL ON SCROLL =====
   const reveals = document.querySelectorAll(".reveal");
   const revealObserver = new IntersectionObserver(
@@ -95,7 +125,7 @@
 
   // ===== ACTIVE NAV LINK ON SCROLL =====
   const sections = document.querySelectorAll("section[id], footer[id]");
-  const navLinks = document.querySelectorAll(".nav-links a");
+  const navLinkAnchors = document.querySelectorAll(".nav-links a");
 
   function updateActiveLink() {
     let current = "";
@@ -110,7 +140,7 @@
       }
     });
 
-    navLinks.forEach((link) => {
+    navLinkAnchors.forEach((link) => {
       link.classList.remove("active");
       const href = link.getAttribute("href").replace("#", "");
       if (href === current) {
